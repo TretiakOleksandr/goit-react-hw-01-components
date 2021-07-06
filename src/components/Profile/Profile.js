@@ -1,16 +1,17 @@
 import PropTypes from "prop-types";
+import s from "../Profile/Profile.module.css";
 
 function UserProfile({ name, tag, location, avatar, followers, views, likes }) {
   return (
-    <div className="profile">
+    <div className={s.profile}>
       <div className="description">
-        <img src={avatar} alt={name} className="avatar" />
+        <img src={avatar} alt={name} className={s.avatar} />
         <p className="name">{name}</p>
-        <p className="tag">{tag}</p>
+        <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={s.stats}>
         <li>
           <span className="label">Followers</span>
           <span className="quantity">{followers}</span>
